@@ -1,3 +1,4 @@
+######################## INITIAL READING OF FILE AND GENERAL CLEANING ########################
 # Reading the file in
 power <- read.table("household_power_consumption.txt", 
                     sep = ";", header = TRUE, skip = 66600, nrows = 3000)
@@ -17,7 +18,12 @@ power$DateTime <- paste(power$Date, power$Time)
 # Convert into a date and time format with strptime
 power$DateTime <- strptime(power$DateTime, format = "%Y-%m-%d %H:%M:%S")
 
-# Plots the histogram 
+################################# END OF READING AND CLEANING ################################
+
+
+# Plot (1):
+
+#Plots the histogram 
 hist(power$Global_active_power, col = "red", main = "Global Active Power", 
      xlab = "Global Active Power (kilowatts)")
 

@@ -1,3 +1,5 @@
+# Plot (3):
+
 # Sets the layout of the plot with datetime and sub_metering 1, adds the appropriate labels
 with(power, plot(DateTime, Sub_metering_1, type = "n", ylab = "Energy sub metering", xlab = ""))
 
